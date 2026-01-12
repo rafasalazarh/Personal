@@ -220,3 +220,4 @@ Puedes usar estas URLs de ejemplo para probar (de Pannellum):
 
 **¡Disfruta explorando propiedades en 360°!** 🎥✨
 
+
