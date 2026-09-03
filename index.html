@@ -3,416 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inmobiliaria Premium - Tours Virtuales 360°</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Inmobiliaria Premium: casas, departamentos y villas con recorridos virtuales 360° para compra, renta y estancias cortas.">
+    <title>Inmobiliaria Premium — Tours virtuales 360°</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Pannellum para tours 360 -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
-    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <div class="logo">
-                        <h2>🏠 Inmobiliaria Premium</h2>
-                    </div>
-                    <ul class="nav-menu" id="navMenu">
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#propiedades">Propiedades 360°</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                    <div class="hamburger" id="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="header" id="siteHeader">
+        <nav class="navbar" aria-label="Principal">
+            <div class="container nav-wrapper">
+                <a class="logo" href="#inicio">
+                    <span class="logo-mark" aria-hidden="true"></span>
+                    <span class="logo-text">Inmobiliaria <em>Premium</em></span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#propiedades">Propiedades</a></li>
+                    <li><a href="#zonas">Zonas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <a class="nav-cta" href="#contacto">Agendar visita</a>
+                <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Banner -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Recorridos Virtuales 360°</h1>
-            <p>Explora propiedades desde cualquier lugar con nuestros tours virtuales inmersivos. Perfecto para Airbnb, renta y compra.</p>
-            <div class="hero-buttons">
-                <a href="#propiedades" class="btn btn-primary">Ver Propiedades 360°</a>
-                <a href="#contacto" class="btn btn-secondary">Contactar</a>
+    <main id="contenido">
+        <section id="inicio" class="hero">
+            <div class="hero-media" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=80" alt="" width="1920" height="1080">
             </div>
-        </div>
-        <div class="hero-overlay"></div>
-    </section>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <p class="eyebrow">Colección residencial · Ciudad de México</p>
+                <h1>Recorre cada espacio antes de cruzar la puerta.</h1>
+                <p class="hero-lead">Casas, departamentos y villas con tours 360° en alta definición. Compra, renta o estancia corta, con la misma claridad que una visita en persona.</p>
+                <div class="hero-actions">
+                    <a href="#propiedades" class="btn btn-primary">Ver inventario</a>
+                    <a href="#contacto" class="btn btn-ghost">Solicitar un tour</a>
+                </div>
+                <dl class="hero-meta">
+                    <div>
+                        <dt>Inventario activo</dt>
+                        <dd id="heroInventory">15 listados</dd>
+                    </div>
+                    <div>
+                        <dt>Tours 360°</dt>
+                        <dd>En cada propiedad</dd>
+                    </div>
+                    <div>
+                        <dt>Respuesta</dt>
+                        <dd>Menos de 24 h</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
 
-    <!-- Banner de Información -->
-    <section class="info-banner">
-        <div class="container">
-            <div class="info-grid">
+        <section class="info-banner" aria-label="Cifras">
+            <div class="container info-grid">
                 <div class="info-item">
-                    <div class="info-icon">📊</div>
-                    <h3>500+</h3>
-                    <p>Propiedades con Tour 360°</p>
+                    <p class="info-value">15</p>
+                    <p class="info-label">Propiedades con recorrido 360°</p>
                 </div>
                 <div class="info-item">
-                    <div class="info-icon">🎥</div>
-                    <h3>100%</h3>
-                    <p>Tours Virtuales HD</p>
+                    <p class="info-value">4K</p>
+                    <p class="info-label">Captura panorámica profesional</p>
                 </div>
                 <div class="info-item">
-                    <div class="info-icon">👥</div>
-                    <h3>1000+</h3>
-                    <p>Clientes Satisfechos</p>
+                    <p class="info-value">3</p>
+                    <p class="info-label">Modalidades: compra, renta y corta estancia</p>
                 </div>
                 <div class="info-item">
-                    <div class="info-icon">🏆</div>
-                    <h3>15+</h3>
-                    <p>Años de Experiencia</p>
+                    <p class="info-value">15+</p>
+                    <p class="info-label">Años asesorando familias y huéspedes</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Servicios -->
-    <section id="servicios" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nuestros Servicios</h2>
-                <p>Ofrecemos tours virtuales 360° para todas tus necesidades inmobiliarias</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎥</div>
-                    <h3>Tours Virtuales 360°</h3>
-                    <p>Recorridos inmersivos de alta calidad que permiten explorar cada rincón de la propiedad desde cualquier dispositivo.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>Propiedades para Compra</h3>
-                    <p>Explora propiedades en venta con tours 360° completos. Visualiza cada detalle antes de visitar en persona.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔑</div>
-                    <h3>Renta y Airbnb</h3>
-                    <p>Ideal para propiedades en renta y listados de Airbnb. Los huéspedes pueden ver el espacio completo antes de reservar.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>Compatible Móvil</h3>
-                    <p>Nuestros tours 360° funcionan perfectamente en smartphones, tablets y computadoras. Experiencia inmersiva en cualquier dispositivo.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌐</div>
-                    <h3>Integración Web</h3>
-                    <p>Fácil integración en tu sitio web, redes sociales o plataformas de listados inmobiliarios.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📸</div>
-                    <h3>Fotografía Profesional</h3>
-                    <p>Combinamos tours 360° con fotografías profesionales para mostrar tu propiedad de la mejor manera.</p>
+        <section id="servicios" class="services">
+            <div class="container">
+                <header class="section-header">
+                    <p class="eyebrow">Cómo trabajamos</p>
+                    <h2>Visitas inmersivas, operación clara</h2>
+                    <p>Un mismo estándar visual para quien compra, renta o publica en plataformas de corta estancia.</p>
+                </header>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <h3>Tours virtuales 360°</h3>
+                        <p>Panorámicas equirectangulares con zoom, brújula y controles táctiles. El visitante entiende distribución, luz y acabados sin desplazarse.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Compra residencial</h3>
+                        <p>Casas y departamentos en venta con ficha técnica, precio y recorrido. Filtra el inventario antes de agendar una cita en sitio.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Renta de largo plazo</h3>
+                        <p>Contratos residenciales con la misma calidad de recorrido. Menos visitas fallidas y mejor coincidencia de expectativas.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Corta estancia</h3>
+                        <p>Listados tipo Airbnb con tarifa por noche y tour completo del espacio, ideal para huéspedes que reservan a distancia.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Fotografía editorial</h3>
+                        <p>Imágenes de portada alineadas con el tour 360°, para web, redes y fichas de listado sin mezclar estilos.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Asesoría de cierre</h3>
+                        <p>Acompañamiento en visita física, documentación y seguimiento. El recorrido digital acorta el ciclo; no lo sustituye al final.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Propiedades / Galería -->
-    <section id="propiedades" class="properties">
-        <div class="container">
-            <div class="section-header">
-                <h2>Propiedades con Tours 360°</h2>
-                <p>Explora nuestras propiedades con recorridos virtuales inmersivos</p>
-            </div>
-            
-            <!-- Filtros -->
-            <div class="property-filters">
-                <button class="filter-btn active" data-filter="all">Todas</button>
-                <button class="filter-btn" data-filter="compra">Compra</button>
-                <button class="filter-btn" data-filter="renta">Renta</button>
-                <button class="filter-btn" data-filter="airbnb">Airbnb</button>
-            </div>
+        <section id="propiedades" class="properties">
+            <div class="container">
+                <header class="section-header">
+                    <p class="eyebrow">Inventario</p>
+                    <h2>Propiedades con tour 360°</h2>
+                    <p>Quince ejemplos de casas, departamentos, villas, lofts y penthouses. Filtra por operación.</p>
+                </header>
 
-            <div class="properties-grid" id="propertiesGrid">
-                <!-- Propiedad 1 - Compra -->
-                <div class="property-card" data-type="compra">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop" alt="Casa moderna">
-                        <span class="property-badge">Compra</span>
-                        <div class="property-overlay">
-                            <button class="btn-tour-360" data-tour="tour1" data-title="Casa Moderna en Zona Premium">
-                                🎥 Ver Tour 360°
-                            </button>
-                        </div>
-                    </div>
-                    <div class="property-info">
-                        <h3>Casa Moderna en Zona Premium</h3>
-                        <p class="property-location">📍 Ciudad, Zona Residencial</p>
-                        <div class="property-details">
-                            <span>🛏️ 4 Habitaciones</span>
-                            <span>🚿 3 Baños</span>
-                            <span>📐 250 m²</span>
-                        </div>
-                        <div class="property-price">$350,000</div>
-                        <div class="property-actions">
-                            <button class="btn-tour-360 btn-small" data-tour="tour1" data-title="Casa Moderna en Zona Premium">Ver Tour 360°</button>
-                        </div>
-                    </div>
+                <div class="filter-bar" role="toolbar" aria-label="Filtrar propiedades">
+                    <button type="button" class="filter-btn active" data-filter="all">Todas</button>
+                    <button type="button" class="filter-btn" data-filter="compra">Compra</button>
+                    <button type="button" class="filter-btn" data-filter="renta">Renta</button>
+                    <button type="button" class="filter-btn" data-filter="airbnb">Corta estancia</button>
                 </div>
+                <p class="filter-status" id="filterStatus" aria-live="polite"></p>
 
-                <!-- Propiedad 2 - Airbnb -->
-                <div class="property-card" data-type="airbnb">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" alt="Apartamento">
-                        <span class="property-badge property-badge-airbnb">Airbnb</span>
-                        <div class="property-overlay">
-                            <button class="btn-tour-360" data-tour="tour2" data-title="Apartamento Elegante Centro">
-                                🎥 Ver Tour 360°
-                            </button>
-                        </div>
-                    </div>
-                    <div class="property-info">
-                        <h3>Apartamento Elegante Centro</h3>
-                        <p class="property-location">📍 Centro de la Ciudad</p>
-                        <div class="property-details">
-                            <span>🛏️ 2 Habitaciones</span>
-                            <span>🚿 2 Baños</span>
-                            <span>📐 120 m²</span>
-                        </div>
-                        <div class="property-price">$1,200/mes</div>
-                        <div class="property-actions">
-                            <button class="btn-tour-360 btn-small" data-tour="tour2" data-title="Apartamento Elegante Centro">Ver Tour 360°</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Propiedad 3 - Compra -->
-                <div class="property-card" data-type="compra">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" alt="Villa">
-                        <span class="property-badge">Compra</span>
-                        <div class="property-overlay">
-                            <button class="btn-tour-360" data-tour="tour3" data-title="Villa de Lujo con Piscina">
-                                🎥 Ver Tour 360°
-                            </button>
-                        </div>
-                    </div>
-                    <div class="property-info">
-                        <h3>Villa de Lujo con Piscina</h3>
-                        <p class="property-location">📍 Zona Exclusiva</p>
-                        <div class="property-details">
-                            <span>🛏️ 5 Habitaciones</span>
-                            <span>🚿 4 Baños</span>
-                            <span>📐 400 m²</span>
-                        </div>
-                        <div class="property-price">$750,000</div>
-                        <div class="property-actions">
-                            <button class="btn-tour-360 btn-small" data-tour="tour3" data-title="Villa de Lujo con Piscina">Ver Tour 360°</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Propiedad 4 - Renta -->
-                <div class="property-card" data-type="renta">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop" alt="Casa familiar">
-                        <span class="property-badge property-badge-rent">Renta</span>
-                        <div class="property-overlay">
-                            <button class="btn-tour-360" data-tour="tour4" data-title="Casa Familiar Espaciosa">
-                                🎥 Ver Tour 360°
-                            </button>
-                        </div>
-                    </div>
-                    <div class="property-info">
-                        <h3>Casa Familiar Espaciosa</h3>
-                        <p class="property-location">📍 Barrio Residencial</p>
-                        <div class="property-details">
-                            <span>🛏️ 3 Habitaciones</span>
-                            <span>🚿 2 Baños</span>
-                            <span>📐 180 m²</span>
-                        </div>
-                        <div class="property-price">$1,500/mes</div>
-                        <div class="property-actions">
-                            <button class="btn-tour-360 btn-small" data-tour="tour4" data-title="Casa Familiar Espaciosa">Ver Tour 360°</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Propiedad 5 - Airbnb -->
-                <div class="property-card" data-type="airbnb">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=800&h=600&fit=crop" alt="Loft">
-                        <span class="property-badge property-badge-airbnb">Airbnb</span>
-                        <div class="property-overlay">
-                            <button class="btn-tour-360" data-tour="tour5" data-title="Loft Moderno Minimalista">
-                                🎥 Ver Tour 360°
-                            </button>
-                        </div>
-                    </div>
-                    <div class="property-info">
-                        <h3>Loft Moderno Minimalista</h3>
-                        <p class="property-location">📍 Zona Trendy</p>
-                        <div class="property-details">
-                            <span>🛏️ 1 Habitación</span>
-                            <span>🚿 1 Baño</span>
-                            <span>📐 80 m²</span>
-                        </div>
-                        <div class="property-price">$90/noche</div>
-                        <div class="property-actions">
-                            <button class="btn-tour-360 btn-small" data-tour="tour5" data-title="Loft Moderno Minimalista">Ver Tour 360°</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Propiedad 6 - Compra -->
-                <div class="property-card" data-type="compra">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop" alt="Penthouse">
-                        <span class="property-badge">Compra</span>
-                        <div class="property-overlay">
-                            <button class="btn-tour-360" data-tour="tour6" data-title="Penthouse con Vista Panorámica">
-                                🎥 Ver Tour 360°
-                            </button>
-                        </div>
-                    </div>
-                    <div class="property-info">
-                        <h3>Penthouse con Vista Panorámica</h3>
-                        <p class="property-location">📍 Torre Premium</p>
-                        <div class="property-details">
-                            <span>🛏️ 3 Habitaciones</span>
-                            <span>🚿 3 Baños</span>
-                            <span>📐 200 m²</span>
-                        </div>
-                        <div class="property-price">$550,000</div>
-                        <div class="property-actions">
-                            <button class="btn-tour-360 btn-small" data-tour="tour6" data-title="Penthouse con Vista Panorámica">Ver Tour 360°</button>
-                        </div>
-                    </div>
+                <div class="properties-grid" id="propertiesGrid">
+                    <noscript>Activa JavaScript para ver el inventario y los tours 360°.</noscript>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Modal para Tour 360 -->
-    <div id="tourModal" class="tour-modal">
+        <section id="zonas" class="zones">
+            <div class="container">
+                <header class="section-header">
+                    <p class="eyebrow">Cobertura</p>
+                    <h2>Zonas que cubrimos</h2>
+                    <p>Un recorte de colonias y destinos con inventario activo en esta demostración.</p>
+                </header>
+                <ul class="zones-grid">
+                    <li><strong>Polanco</strong> Residencial y corporativo</li>
+                    <li><strong>Condesa / Roma</strong> Departamentos y lofts</li>
+                    <li><strong>Santa Fe</strong> Torres y penthouses</li>
+                    <li><strong>Coyoacán / San Ángel</strong> Casas con jardín</li>
+                    <li><strong>Valle de Bravo</strong> Villas de fin de semana</li>
+                    <li><strong>Tulum</strong> Corta estancia frente a selva</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="quotes" aria-labelledby="quotes-title">
+            <div class="container">
+                <header class="section-header">
+                    <p class="eyebrow">Clientes</p>
+                    <h2 id="quotes-title">Lo que comentan después del tour</h2>
+                </header>
+                <div class="quotes-grid">
+                    <blockquote>
+                        <p>Vimos el penthouse desde Monterrey. Cuando llegamos, la distribución coincidía con el 360. Cerramos en la segunda visita.</p>
+                        <footer>Mariana L. · Compra en Santa Fe</footer>
+                    </blockquote>
+                    <blockquote>
+                        <p>Para el depto en Condesa, los huéspedes dejan menos dudas en el chat. El recorrido sustituye diez fotos sueltas.</p>
+                        <footer>Andrés P. · Anfitrión</footer>
+                    </blockquote>
+                    <blockquote>
+                        <p>Rentamos sin recorrer diez colonias el mismo sábado. Filtramos tres casas y visitamos solo una.</p>
+                        <footer>Sofía y Diego · Renta en Coyoacán</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <header class="section-header">
+                    <p class="eyebrow">Contacto</p>
+                    <h2>Agenda un recorrido o un tour 360°</h2>
+                    <p>Cuéntanos el inmueble o el servicio. Guardamos la consulta en el servidor local de esta demo.</p>
+                </header>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Teléfono</h3>
+                            <p><a href="tel:+525555123456">+52 55 5512 3456</a></p>
+                            <p><a href="tel:+525555987654">+52 55 5598 7654</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Correo</h3>
+                            <p><a href="mailto:hola@inmobiliariapremium.mx">hola@inmobiliariapremium.mx</a></p>
+                            <p><a href="mailto:tours@inmobiliariapremium.mx">tours@inmobiliariapremium.mx</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Estudio</h3>
+                            <p>Av. Presidente Masaryk 111, Polanco</p>
+                            <p>Miguel Hidalgo, CDMX 11560</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Horario</h3>
+                            <p>Lunes a viernes, 9:00–18:00</p>
+                            <p>Sábados, 10:00–14:00</p>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" autocomplete="name" maxlength="120" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Interés</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="tour360">Solicitar tour 360°</option>
+                                    <option value="compra">Compra</option>
+                                    <option value="venta">Venta</option>
+                                    <option value="alquiler">Renta</option>
+                                    <option value="airbnb">Corta estancia</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" maxlength="2000" required></textarea>
+                        </div>
+                        <p class="form-status" id="formStatus" role="status" hidden></p>
+                        <button type="submit" class="btn btn-primary" id="formSubmit">Enviar consulta</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="tourModal" class="tour-modal" role="dialog" aria-modal="true" aria-labelledby="tourModalTitle" hidden>
         <div class="tour-modal-content">
-            <span class="tour-modal-close">&times;</span>
-            <h2 id="tourModalTitle">Tour Virtual 360°</h2>
+            <button type="button" class="tour-modal-close" id="tourModalClose" aria-label="Cerrar recorrido">&times;</button>
+            <h2 id="tourModalTitle">Tour virtual 360°</h2>
             <div id="panorama" class="panorama-viewer"></div>
-            <div class="tour-controls">
-                <p class="tour-instructions">🖱️ Arrastra para rotar | 🔍 Rueda del mouse para zoom | 📱 Gira tu dispositivo</p>
-            </div>
+            <p class="tour-instructions">Arrastra para rotar. Rueda o pellizco para zoom. Escape para cerrar.</p>
         </div>
     </div>
 
-    <!-- Contacto -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contáctanos</h2>
-                <p>¿Quieres un tour 360° para tu propiedad? Estamos aquí para ayudarte</p>
-            </div>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <h3>Teléfono</h3>
-                            <p>+1 (555) 123-4567</p>
-                            <p>+1 (555) 987-6543</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@inmobiliariapremium.com</p>
-                            <p>tours360@inmobiliariapremium.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h3>Dirección</h3>
-                            <p>Av. Principal 123, Oficina 45</p>
-                            <p>Ciudad, País 12345</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🕒</div>
-                        <div>
-                            <h3>Horario</h3>
-                            <p>Lunes - Viernes: 9:00 AM - 6:00 PM</p>
-                            <p>Sábados: 10:00 AM - 2:00 PM</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Nombre completo" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" placeholder="Teléfono" required>
-                    </div>
-                    <div class="form-group">
-                        <select id="service" required>
-                            <option value="">Selecciona un servicio</option>
-                            <option value="tour360">Solicitar Tour 360°</option>
-                            <option value="compra">Compra</option>
-                            <option value="venta">Venta</option>
-                            <option value="alquiler">Alquiler</option>
-                            <option value="airbnb">Airbnb</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="Mensaje" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Inmobiliaria Premium</h3>
-                    <p>Especialistas en tours virtuales 360°. Más de 15 años ayudando a las personas a encontrar su hogar ideal con tecnología inmersiva.</p>
+                    <p class="logo-text">Inmobiliaria <em>Premium</em></p>
+                    <p>Estudio de listados con recorridos 360°. Inventario de demostración para compra, renta y corta estancia.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Enlaces Rápidos</h4>
+                    <h2>Secciones</h2>
                     <ul>
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#propiedades">Propiedades 360°</a></li>
+                        <li><a href="#propiedades">Propiedades</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Síguenos</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">📘 Facebook</a>
-                        <a href="#" aria-label="Instagram">📷 Instagram</a>
-                        <a href="#" aria-label="LinkedIn">💼 LinkedIn</a>
-                        <a href="#" aria-label="Twitter">🐦 Twitter</a>
-                    </div>
+                    <h2>Redes</h2>
+                    <ul class="social-links">
+                        <li><a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Inmobiliaria Premium. Todos los derechos reservados.</p>
-            </div>
+            <p class="footer-bottom"><span id="copyrightYear">2026</span> Inmobiliaria Premium. Sitio de demostración.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
